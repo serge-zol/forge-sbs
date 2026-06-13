@@ -18,7 +18,7 @@
 | effort | `"high"` | замінює budget_tokens (Opus 4.8) |
 | temperature | ❌ не вказувати | несумісно з thinking |
 | max_tokens | `32000` | до 128k, має перевищувати thinking |
-| output_format | XML | |
+| output_format | XML | лише для API-envelope; текст інструкцій — plain text |
 
 **Тірована модель (економія):**
 - Haiku 4.5 — форматні перевірки, конформність схеми, легкий чорновий суддя
@@ -64,5 +64,4 @@ INBOX(⚠️) → INPUT → GENERATE → REVIEW → TEST → STORE → [PROD →
 
 | Компонент | Роль |
 |-----------|------|
-| Anthropic API (Opus 4.8) | Генерація, суддя, арбітраж |
-| GPT-5.5 (ЧЕК, напівручно) | Незалеж
+| Anthropic API (Opus 4.8) | Генерація, суддя,
