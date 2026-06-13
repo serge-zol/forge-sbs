@@ -7,7 +7,14 @@ current_version: v1
 status: frozen
 created: 2026-06-13
 frozen: 2026-06-13
+api_envelope:
+  format: JSON
+  agreed_cross_model: true
+  note: "JSON-схема узгоджена між Opus 4.8 і GPT-5.5. Текст інструкцій всередині — plain text."
 changelog:
   - version: v1
     date: 2026-06-13
     notes: "Canonical 16-section schema. Restructured by Opus 4.8 independently (not by KOVAL). Frozen as root-of-trust."
+  - version: meta
+    date: 2026-06-13
+    notes: "Додано api_envelope: JSON-схема узгоджена крос-модельно (Opus 4.8 + GPT-5.5)."
