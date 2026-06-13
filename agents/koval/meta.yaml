@@ -1,7 +1,22 @@
-name: Коваль
+name: КОВАЛЬ
 folder: koval
-role: "Мета-агент: пише інструкції для всіх інших агентів"
-current_version: ~
-status: inbox
+role: "meta-agent / інженер системних інструкцій"
+current_version: v1.2-canonical
+status: frozen
+schema: canonical-16
 created: 2026-06-13
-changelog: []
+frozen: 2026-06-13
+audit:
+  verdict: "ПРИДАТНО"
+  score: 4.75
+  auditor: "CHEK (GPT-5.5)"
+  date: 2026-06-13
+  file: agents/koval/v1/audit_koval_v1.1_pass.txt
+source_of_truth: agents/koval/v1/instruction.txt
+changelog:
+  - version: v1.0
+    notes: "Opus 4.8 restructure під canonical-16 schema"
+  - version: v1.1
+    notes: "4 правки за аудитом ЧЕК"
+  - version: v1.2
+    notes: "3 правки за аудитом ЧЕК. ПРИДАТНО 4.75. Frozen."
