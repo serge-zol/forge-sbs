@@ -1,21 +1,25 @@
 name: ЧЕК
 folder: chek
-role: "Незалежний рецензент"
-model: "GPT-5.5"
-note: "Gemini 3.1 pro — резервний, не використовувати без явного дозволу"
-current_version: v2
-status: final
+role: "незалежний рецензент інструкцій (GPT-5.5, незалежний від Claude)"
+schema: canonical-16
+rubric: "6x5, поріг 4.0, жорсткий гейт по критичному"
+current_version: "v2.1-core / v1-canonical-full"
+status: "frozen (root-of-trust)"
 created: 2026-06-13
 frozen: 2026-06-13
+note: "змінюється ТІЛЬКИ через Opus+людина (не self-audit, не KOVAL)"
+files:
+  full: "agents/chek/v1/full.txt"
+  core: "agents/chek/v1/core.txt"
+  api_schema: "agents/chek/v1/api_schema.json"
 api_envelope:
   format: JSON
-  schema_file: "agents/chek/v2/api_schema.json"
   agreed_cross_model: true
-  note: "JSON-схема узгоджена між Opus 4.8 і GPT-5.5. Текст інструкцій всередині — plain text."
+  note: "JSON-схема узгоджена між Opus 4.8 і GPT-5.5. Текст інструкцій — plain text."
 changelog:
-  - version: v1
-    date: 2026-06-13
-    notes: "Canonical 16-section schema. Restructured by Opus 4.8 independently (not by KOVAL). Frozen as root-of-trust."
-  - version: v2
-    date: 2026-06-13
-    notes: "Core = v2-core (стартове меню + самоаудит-заборона вбудовані). api_schema.json додано. CHEK final — закритий."
+  - version: v1-seed
+    notes: "Оригінальна інструкція GPT-проекту"
+  - version: v1-canonical
+    notes: "Opus 4.8 restructure під canonical-16. Root-of-trust еталон."
+  - version: v2.1-core
+    notes: "Рубрика 6x5 + JSON-схема + авто-файл аудиту + стартове меню + заборона самоаудиту. Frozen."
