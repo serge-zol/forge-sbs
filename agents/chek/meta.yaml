@@ -2,4 +2,12 @@ name: ЧЕК
 folder: chek
 role: "Незалежний рецензент"
 model: "GPT-5.5"
-note: "Gemini 3.1 pro — резервний, не використовувати без я
+note: "Gemini 3.1 pro — резервний, не використовувати без явного дозволу"
+current_version: v1
+status: frozen
+created: 2026-06-13
+frozen: 2026-06-13
+changelog:
+  - version: v1
+    date: 2026-06-13
+    notes: "Canonical 16-section schema. Restructured by Opus 4.8 independently (not by KOVAL). Frozen as root-of-trust."
