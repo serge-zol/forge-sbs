@@ -1,6 +1,8 @@
 name: ЧЕК
 folder: chek
-role: "Незалежний рецензент (інша модель: GPT-4o / Gemini)"
+role: "Незалежний рецензент"
+model: "GPT-5.5"
+note: "Gemini 3.1 pro — резервний, не використовувати без явного дозволу"
 current_version: ~
 status: inbox
 created: 2026-06-13
