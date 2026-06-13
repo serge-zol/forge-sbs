@@ -3,18 +3,19 @@ folder: chek
 role: "Незалежний рецензент"
 model: "GPT-5.5"
 note: "Gemini 3.1 pro — резервний, не використовувати без явного дозволу"
-current_version: v1
-status: frozen
+current_version: v2
+status: final
 created: 2026-06-13
 frozen: 2026-06-13
 api_envelope:
   format: JSON
+  schema_file: "agents/chek/v2/api_schema.json"
   agreed_cross_model: true
   note: "JSON-схема узгоджена між Opus 4.8 і GPT-5.5. Текст інструкцій всередині — plain text."
 changelog:
   - version: v1
     date: 2026-06-13
     notes: "Canonical 16-section schema. Restructured by Opus 4.8 independently (not by KOVAL). Frozen as root-of-trust."
-  - version: meta
+  - version: v2
     date: 2026-06-13
-    notes: "Додано api_envelope: JSON-схема узгоджена крос-модельно (Opus 4.8 + GPT-5.5)."
+    notes: "Core = v2-core (стартове меню + самоаудит-заборона вбудовані). api_schema.json додано. CHEK final — закритий."

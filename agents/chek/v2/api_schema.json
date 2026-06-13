@@ -1,0 +1,41 @@
+{
+  "name": "chek_verdict",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "verdict": {
+        "type": "string",
+        "enum": ["ПРИДАТНО", "ПРИДАТНО ПІСЛЯ ПРАВОК", "НЕ ГОТОВО"]
+      },
+      "scores": {
+        "type": "object",
+        "properties": {
+          "task":         { "type": "integer", "minimum": 1, "maximum": 5 },
+          "instructions": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "format":       { "type": "integer", "minimum": 1, "maximum": 5 },
+          "edge_cases":   { "type": "integer", "minimum": 1, "maximum": 5 },
+          "refusals":     { "type": "integer", "minimum": 1, "maximum": 5 },
+          "tone":         { "type": "integer", "minimum": 1, "maximum": 5 }
+        },
+        "required": ["task","instructions","format","edge_cases","refusals","tone"],
+        "additionalProperties": false
+      },
+      "score_avg":            { "type": "number" },
+      "hard_gate_triggered":  { "type": "boolean" },
+      "gate_reason":          { "type": "string" },
+      "critical_issues":      { "type": "array", "items": { "type": "string" } },
+      "important_issues":     { "type": "array", "items": { "type": "string" } },
+      "risks":                { "type": "array", "items": { "type": "string" } },
+      "missing":              { "type": "array", "items": { "type": "string" } },
+      "recommendations":      { "type": "array", "items": { "type": "string" } },
+      "next_step":            { "type": "string" }
+    },
+    "required": [
+      "verdict","scores","score_avg","hard_gate_triggered","gate_reason",
+      "critical_issues","important_issues","risks","missing",
+      "recommendations","next_step"
+    ],
+    "additionalProperties": false
+  },
+  "strict": true
+}
